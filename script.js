@@ -28,15 +28,11 @@ document.getElementById("theme-toggle").addEventListener("click", () => {
   });
   
   // Fake subscribe handling
-document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("subscribe-form");
-  if (form) {
-    form.addEventListener("submit", function () {
-      alert("Thanks for subscribing!");
-    });
-  }
-});
-
+  document.getElementById("subscription-form").addEventListener("submit", (e) => {
+    e.preventDefault();
+    alert("Thanks for subscribing! 🚀");
+  });
+  
   // Load Lottie animation
   lottie.loadAnimation({
     container: document.getElementById('lottie-animation'),
