@@ -113,10 +113,33 @@
   <section id="cta">
     <h2>Get Notified About Launch</h2>
     <p>Subscribe to our newsletter and be the first to know when we launch. Stay updated on new features and academic tips!</p>
-    <form id="subscription-form">
-      <input type="email" placeholder="Your email" required />
-      <button type="submit">Subscribe</button>
-    </form>
+    <form id="subscription-form" action="https://formspree.io/f/xyzabcd" method="POST">
+  <input type="email" name="email" placeholder="Enter your email" required />
+  <button type="submit">Subscribe</button>
+</form>
+
+<script>
+  const form = document.getElementById("subscription-form");
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const data = new FormData(form);
+    fetch(form.action, {
+      method: "POST",
+      body: data,
+      headers: {
+        Accept: "application/json"
+      }
+    }).then(response => {
+      if (response.ok) {
+        alert("Thanks for subscribing! 🚀");
+        form.reset();
+      } else {
+        alert("Oops! Something went wrong.");
+      }
+    });
+  });
+</script>
+
   </section>
 
   <!-- Scroll to Top -->
