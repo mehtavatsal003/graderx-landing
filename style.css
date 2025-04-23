@@ -312,6 +312,30 @@ body.light footer {
   background-color: #52e0c4;
 }
 
+.form-input {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  width: 250px;
+  font-size: 1rem;
+}
+
+.form-button {
+  padding: 10px 20px;
+  background-color: #64ffda;
+  color: #0a192f;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.form-button:hover {
+  transform: scale(1.05);
+}
+
+
 /* Footer Section */
 footer {
   background-color: #1d2a44;
